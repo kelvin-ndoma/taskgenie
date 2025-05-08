@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ai from "../assets/ai.webp"
 
 // Custom hook for window size detection
 const useWindowSize = () => {
@@ -36,30 +37,18 @@ const ResponsiveHomepage = () => {
             {/* Text Content */}
             <div className="lg:w-1/2">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-                <span className="block">Specialized</span>
-                <span className="text-indigo-600">
-                  {isSmallMobile ? "AI" : "Artificial Intelligence"} 
-                </span>
-                <span>Startup</span>
+                <span className="block">Welcome to</span>
+                <span className="text-indigo-600">TaskGenie</span>
               </h1>
               
               <p className="text-base sm:text-lg text-gray-600 mb-6 md:mb-8 max-w-xl">
-                {isMobile ? (
-                  "Advanced AI solutions tailored to your business needs. Transform your operations today."
-                ) : (
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
-                  "incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices " +
-                  "gravida risus commodo."
-                )}
+                Your trusted outsourcing and digital services partner. We help businesses grow through affordable, high-quality services. Whether you're scaling operations or building your digital presence, our expert teams and proven systems are ready to support your goals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg text-sm sm:text-base">
+                <a href="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg text-sm sm:text-base">
                   {isSmallMobile ? "Learn" : "Learn More"}
-                </button>
-                <button className="border-2 border-gray-300 hover:border-indigo-600 text-gray-700 hover:text-indigo-600 font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition duration-300 text-sm sm:text-base">
-                  {isSmallMobile ? "Contact" : "Connect Us"}
-                </button>
+                </a>
               </div>
             </div>
             
@@ -67,8 +56,8 @@ const ResponsiveHomepage = () => {
             <div className={`lg:w-1/2 mt-8 sm:mt-0 ${isSmallMobile ? '' : ''}`}>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
-                  alt="AI Technology" 
+                  src={ai}
+                  alt="Business Team" 
                   className="rounded-xl shadow-xl w-full object-cover"
                   loading="lazy"
                 />
@@ -84,10 +73,10 @@ const ResponsiveHomepage = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-              Our <span className="text-indigo-600">AI Solutions</span>
+              Our <span className="text-indigo-600">Services</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-              {isMobile ? "Cutting-edge AI for your business" : "Cutting-edge artificial intelligence tailored to your business needs"}
+              {isMobile ? "Comprehensive solutions for your business" : "High-quality services tailored to your business needs"}
             </p>
           </div>
 
@@ -103,12 +92,11 @@ const ResponsiveHomepage = () => {
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
-            <StatItem value="95%" label={isSmallMobile ? "Accuracy" : "Accuracy Rate"} />
-            <StatItem value="50+" label={isSmallMobile ? "Clients" : "Happy Clients"} />
+            <StatItem value="95%" label={isSmallMobile ? "Satisfaction" : "Client Satisfaction"} />
             <StatItem value="24/7" label="Support" />
             <StatItem 
               value={isSmallMobile ? "10×" : "10x"} 
-              label={isSmallMobile ? "Speed" : "Faster Processing"} 
+              label={isSmallMobile ? "Efficiency" : "Operational Efficiency"} 
             />
           </div>
         </div>
@@ -132,13 +120,7 @@ const FeatureCard = ({ feature, isMobile }) => {
       <p className="text-gray-600 mb-4 text-sm sm:text-base">
         {isMobile ? feature.shortDescription : feature.description}
       </p>
-      <a href="#" className="text-indigo-600 font-medium hover:text-indigo-800 transition duration-300 inline-flex items-center text-sm sm:text-base">
-        Learn more
-        <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-    </div>
+         </div>
   );
 };
 
@@ -151,22 +133,22 @@ const StatItem = ({ value, label }) => (
 
 const features = [
   {
-    title: "Machine Learning",
-    description: "Advanced algorithms that learn and improve from experience without being explicitly programmed.",
-    shortDescription: "Self-improving algorithms for your business",
-    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+    title: "Data Annotation",
+    description: "With a skilled workforce and advanced tools, we help you build accurate training datasets for intelligent systems across industries.",
+    shortDescription: "Focus on your business while we handle operations",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
   },
   {
-    title: "Computer Vision",
-    description: "AI that can identify and process objects in images and videos like human vision.",
-    shortDescription: "Visual recognition systems",
-    icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+    title: "Digital Marketing & Web development",
+    description: "We power business growth with strategic digital marketing. From brand awareness to lead generation, our team uses data-driven strategies to drive measurable results.",
+    shortDescription: "Complete digital solutions for your business",
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
   },
   {
-    title: "Natural Language",
-    description: "Systems that understand, interpret, and generate human language naturally.",
-    shortDescription: "Human-like language processing",
-    icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+    title: "Operational Support & Consultations",
+    description: "Whatever your operational or digital challenge, we’re here to support you. Let’s talk about how our solutions can help your business thrive.",
+    shortDescription: "Streamlined operations for better efficiency",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
   }
 ];
 

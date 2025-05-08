@@ -5,8 +5,11 @@ import Home from './pages/Home'
 import ContactUs from './pages/ContactUs'
 import Gallery from './pages/Gallery'
 import Industries from './pages/Industries'
-import Service from './pages/Service'
 import About from './pages/About'
+import Dataannotation from './pages/Dataannotation'
+import Contactcenter from './pages/Contactcenter'
+import Digitalmarketing from './pages/Digitalmarketing'
+import Technicalsupport from './pages/Technicalsupport'
 
 
 
@@ -21,7 +24,14 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/cart' element={<Gallery />} />
         <Route path='/login' element={<Industries />} />
-        <Route path='/place-order' element={<Service />} />
+        <Route path='/services/annotation' element={<Dataannotation />} />
+        <Route path='/services/contact-center' element={<Contactcenter />} />
+        <Route path='/services/digital-marketing' element={<Digitalmarketing />} />
+        <Route path='/services/consultations' element={<Technicalsupport />} />
+        <Route path='/contact' element={<ContactUs />} />
+
+
+
       </Routes>
     </div>
   )
