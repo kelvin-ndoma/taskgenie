@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { 
+import { Link } from 'react-router-dom';
+
+import {
   FaSearch, FaChartLine, FaHashtag, FaEnvelope, FaMobileAlt,
   FaLaptopCode, FaPenFancy, FaVideo, FaShoppingCart, FaBullseye,
   FaRobot, FaCalendarAlt, FaAd, FaUsers, FaLightbulb
@@ -111,15 +113,14 @@ const DigitalMarketing = () => {
     }
   ];
 
-  const filteredServices = activeFilter === 'all' 
-    ? services 
+  const filteredServices = activeFilter === 'all'
+    ? services
     : services.filter(service => service.category === activeFilter);
 
   const stats = [
     { value: "3X", label: "Average ROI Increase" },
     { value: "87%", label: "Client Retention" },
-    { value: "24/7", label: "Campaign Monitoring" },
-    { value: "50+", label: "Satisfied Clients" }
+    { value: "24/7", label: "Campaign Monitoring" }
   ];
 
   const processSteps = [
@@ -150,7 +151,7 @@ const DigitalMarketing = () => {
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -159,32 +160,33 @@ const DigitalMarketing = () => {
             <span className="text-purple-600">Digital Growth</span> Engine
           </motion.h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            End-to-end digital marketing and technology solutions designed to accelerate your business growth, 
+            End-to-end digital marketing and technology solutions designed to accelerate your business growth,
             attract quality leads, and maximize your online revenue potential.
           </p>
         </div>
 
         {/* Stats Banner */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="bg-purple-600 text-white rounded-xl p-6 mb-12 grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="bg-purple-600 text-white rounded-xl p-4 sm:p-6 mb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
         >
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-2xl md:text-3xl font-bold">{stat.value}</div>
-              <div className="text-sm md:text-base">{stat.label}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">{stat.value}</div>
+              <div className="text-sm sm:text-base">{stat.label}</div>
             </div>
           ))}
         </motion.div>
+
 
         {/* Services Section */}
         <div className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
             Our Digital Solutions
           </h2>
-          
+
           {/* Filter Tabs */}
           <div className="flex justify-center mb-8 overflow-x-auto pb-2">
             <div className="inline-flex rounded-md shadow-sm">
@@ -229,7 +231,7 @@ const DigitalMarketing = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -272,7 +274,7 @@ const DigitalMarketing = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 whileHover={{ scale: 1.03 }}
                 className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -337,7 +339,7 @@ const DigitalMarketing = () => {
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -351,21 +353,17 @@ const DigitalMarketing = () => {
             Schedule a free consultation with our digital strategists to discuss your goals.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
-            >
-              Get a Free Strategy Session
-            </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-gray-50 text-purple-600 font-medium py-3 px-8 rounded-lg transition-colors duration-300 border border-purple-600 shadow-sm hover:shadow-md"
-            >
-              View Pricing Plans
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+              >
+                Get a Free Strategy Session
+              </motion.button>
+            </Link>
           </div>
+
         </motion.div>
       </div>
     </div>

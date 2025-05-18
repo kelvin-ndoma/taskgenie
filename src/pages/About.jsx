@@ -107,7 +107,7 @@ const AboutPage = () => {
             <div className="md:w-2/3 p-8">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">James Wilson</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">James </h3>
                   <p className="text-blue-600 font-medium">Co-Founder & Data Solutions Lead</p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
@@ -157,11 +157,11 @@ const AboutPage = () => {
             <div className="md:w-2/3 p-8">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Kelvin Roberts</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Kelvin Ndoma</h3>
                   <p className="text-indigo-600 font-medium">Co-Founder & Growth Architect</p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                  Digital Strategist
+                  Digital Strategist | web Developer
                 </span>
               </div>
               <p className="mt-4 text-gray-600">
