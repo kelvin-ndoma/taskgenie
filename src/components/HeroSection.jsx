@@ -43,7 +43,7 @@ const ResponsiveHomepage = () => {
               </h1>
               
               <p className="text-base sm:text-lg text-gray-600 mb-6 md:mb-8 max-w-xl">
-                Your trusted outsourcing and digital services partner. We help businesses grow through affordable, high-quality services.
+                Task Genie is a dynamic Business Process Outsourcing (BPO) company that empowers businesses with intelligent support solutions tailored for growth. With a keen focus on operational excellence, digital innovation, and AI-readiness, Task Genie delivers services that help organizations scale efficiently and effectively in today’s competitive market.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
