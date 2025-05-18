@@ -158,7 +158,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button - UNCHANGED */}
+          {/* Mobile menu button */}
           <div className="-mr-2 flex items-center md:hidden">
             <button
               onClick={toggleMenu}
@@ -181,7 +181,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation - COMPLETELY UNCHANGED */}
+      {/* Mobile Navigation - Updated with icons */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="space-y-1 pb-3 pt-2">
@@ -193,7 +193,7 @@ const Navbar = () => {
               Home
             </Link>
             
-            {/* Mobile Services Dropdown */}
+            {/* Mobile Services Dropdown with Icons */}
             <div>
               <button
                 onClick={toggleServices}
@@ -214,32 +214,44 @@ const Navbar = () => {
               {isServicesOpen && (
                 <div className="space-y-1 bg-blue-50/50 ml-4">
                   <Link 
-                    to="/services/automation" 
-                    className="block py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
+                    to="/services/annotation" 
+                    className="flex items-center py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Workflow Automation
+                    <svg className="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    Data Annotation
                   </Link>
                   <Link 
-                    to="/services/integration" 
-                    className="block py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
+                    to="/services/contact-center" 
+                    className="flex items-center py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    System Integration
+                    <svg className="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Contact Center Solutions
                   </Link>
                   <Link 
-                    to="/services/analytics" 
-                    className="block py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
+                    to="/services/digital-marketing" 
+                    className="flex items-center py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Data Analytics
+                    <svg className="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    Digital Marketing Services
                   </Link>
                   <Link 
-                    to="/services/ai" 
-                    className="block py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
+                    to="/services/consultations" 
+                    className="flex items-center py-2 pl-6 pr-4 text-base font-medium text-gray-600 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    AI Solutions
+                    <svg className="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    Technical Support and Consultation Services
                   </Link>
                 </div>
               )}
