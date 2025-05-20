@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import another from '../assets/sematice.mp4'
 
 const LandingPage = () => {
   return (
@@ -16,14 +17,18 @@ const LandingPage = () => {
                 We provide reliable, scalable outsourcing and digital services—including data annotation,
                 customer support, web development, and digital marketing—to help businesses grow efficiently and affordably.
               </p>
-
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <img
-                src="https://jumpx-react.envytheme.com/images/offer1.png"
-                alt="Machine Learning"
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="max-w-full h-auto"
-              />
+              >
+                <source src={another} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -46,88 +51,88 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-{/* About Section */}
-<section className="bg-gray-100 py-20 px-4">
-  <div className="container mx-auto max-w-6xl">
-    <div className="flex flex-col md:flex-row items-start">
-      {/* Image Column with Button */}
-      <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
-        <div className="mb-8">
-          <img
-            src="https://jumpx-react.envytheme.com/images/about-img.png"
-            alt="Digital Solutions"
-            className="max-w-full h-auto rounded-lg shadow-xl"
-          />
-        </div>
-        <div className="text-center md:text-left">
-          <a 
-            href="/services/digital-marketing" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-          >
-            Explore Our Marketing Services
-          </a>
-        </div>
-      </div>
+      {/* About Section */}
+      <section className="bg-gray-100 py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-start">
+            {/* Image Column with Button */}
+            <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+              <div className="mb-8">
+                <img
+                  src="https://jumpx-react.envytheme.com/images/about-img.png"
+                  alt="Digital Solutions"
+                  className="max-w-full h-auto rounded-lg shadow-xl"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <a
+                  href="/services/digital-marketing"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                >
+                  Explore Our Marketing Services
+                </a>
+              </div>
+            </div>
 
-      {/* Content Column */}
-      <div className="md:w-1/2">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Elevate Your Digital Presence with Expert Solutions
-        </h2>
-        <p className="text-gray-600 mb-8">
-          We specialize in crafting high-performance websites and results-driven digital marketing strategies. 
-          From responsive web design to targeted online campaigns, we help businesses thrive in the digital landscape.
-        </p>
-        <div className="space-y-6">
-          <div className="flex items-start">
-            <div className="bg-blue-100 p-3 rounded-full mr-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">Custom Web Development</h3>
-              <p className="text-gray-600">Tailored websites built with modern technologies for optimal performance and user experience.</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="bg-blue-100 p-3 rounded-full mr-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">SEO & Digital Marketing</h3>
-              <p className="text-gray-600">Comprehensive strategies to increase visibility, traffic, and conversions.</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="bg-blue-100 p-3 rounded-full mr-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">E-Commerce Solutions</h3>
-              <p className="text-gray-600">Powerful online stores designed to maximize sales and customer engagement.</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="bg-blue-100 p-3 rounded-full mr-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">Social Media Management</h3>
-              <p className="text-gray-600">Strategic content creation and campaign management across all platforms.</p>
+            {/* Content Column */}
+            <div className="md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Elevate Your Digital Presence with Expert Solutions
+              </h2>
+              <p className="text-gray-600 mb-8">
+                We specialize in crafting high-performance websites and results-driven digital marketing strategies.
+                From responsive web design to targeted online campaigns, we help businesses thrive in the digital landscape.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Custom Web Development</h3>
+                    <p className="text-gray-600">Tailored websites built with modern technologies for optimal performance and user experience.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">SEO & Digital Marketing</h3>
+                    <p className="text-gray-600">Comprehensive strategies to increase visibility, traffic, and conversions.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">E-Commerce Solutions</h3>
+                    <p className="text-gray-600">Powerful online stores designed to maximize sales and customer engagement.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Social Media Management</h3>
+                    <p className="text-gray-600">Strategic content creation and campaign management across all platforms.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </div>
   );
 };
@@ -137,7 +142,7 @@ const ServiceCard = ({ service }) => {
 
   // Map service titles to their respective routes
   const getServiceRoute = (title) => {
-    switch(title) {
+    switch (title) {
       case "Data annotation":
         return "/services/annotation";
       case "Contact center solution":
@@ -157,7 +162,7 @@ const ServiceCard = ({ service }) => {
   };
 
   return (
-    <div 
+    <div
       className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
       onClick={handleClick}
     >

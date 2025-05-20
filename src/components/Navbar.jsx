@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/Genie.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,9 +47,9 @@ const Navbar = () => {
           <div className="flex flex-shrink-0 items-center">
             <Link 
               to="/" 
-              className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md transition-transform hover:scale-[1.02] active:scale-95"
+              className="flex focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md transition-transform hover:scale-[1.02] active:scale-95"
             >
-              <img src={logo} alt="TaskGenie Logo" className="h-8 w-auto" />
+<img src={logo} alt="TaskGenie Logo" className="h-12 w-auto md:h-14 lg:h-16" />
             </Link>
           </div>
 
